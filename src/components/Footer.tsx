@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, Send } from
 export default function Footer() {
   return (
     <footer id="contact" className="bg-emerald-950 text-white pt-24 pb-12 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Branding */}
           <div className="space-y-6">

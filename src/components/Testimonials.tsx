@@ -38,7 +38,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-24 px-6 bg-white overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}

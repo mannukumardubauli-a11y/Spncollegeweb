@@ -20,7 +20,7 @@ const leaders = [
 export default function Leadership() {
   return (
     <section id="leadership" className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 10 }}

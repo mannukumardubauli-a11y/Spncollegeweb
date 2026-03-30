@@ -31,7 +31,7 @@ const facilities = [
 export default function Facilities() {
   return (
     <section id="facilities" className="py-24 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

@@ -68,7 +68,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export default function Achievements() {
   return (
     <section id="achievements" className="py-16 px-6 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1600px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div className="text-left">
             <motion.span

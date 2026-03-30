@@ -29,7 +29,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-[1600px] mx-auto px-6 relative z-10 w-full">
         {/* Top Centered Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

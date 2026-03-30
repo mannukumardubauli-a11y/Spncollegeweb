@@ -32,7 +32,7 @@ export default function Navbar() {
         isScrolled ? "bg-white/80 backdrop-blur-md py-2 shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <a href="#home" className="flex items-center gap-2 group">
             <div className="bg-white p-1 rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.1)] group-hover:scale-105 transition-transform">
