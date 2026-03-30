@@ -4,15 +4,15 @@ import { Calendar, Users, CheckCircle2, Trophy } from 'lucide-react';
 
 const stats = [
   { 
-    label: 'Years of Excellence', 
+    label: 'उत्कृष्टता के वर्ष', 
     value: 30, 
-    suffix: ' Years', 
+    suffix: ' वर्ष', 
     icon: Calendar,
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-50'
   },
   { 
-    label: 'Happy Students', 
+    label: 'खुश छात्र', 
     value: 10000, 
     suffix: '+', 
     icon: Users,
@@ -20,7 +20,7 @@ const stats = [
     bgColor: 'bg-blue-50'
   },
   { 
-    label: 'Success Rate', 
+    label: 'सफलता दर', 
     value: 98, 
     suffix: '%', 
     icon: CheckCircle2,
@@ -28,7 +28,7 @@ const stats = [
     bgColor: 'bg-emerald-50'
   },
   { 
-    label: 'Total Awards', 
+    label: 'कुल पुरस्कार', 
     value: 200, 
     suffix: '+', 
     icon: Trophy,
@@ -67,7 +67,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-16 px-6 bg-slate-50/50 relative overflow-hidden">
+    <section id="achievements" className="py-16 px-6 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div className="text-left">
@@ -77,7 +77,7 @@ export default function Achievements() {
               viewport={{ once: true }}
               className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2 block"
             >
-              Our Achievements
+              हमारी उपलब्धियां
             </motion.span>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export default function Achievements() {
               viewport={{ once: true }}
               className="text-3xl md:text-5xl font-black text-slate-900"
             >
-              Pride Moments & Stats
+              गर्व के क्षण और आंकड़े
             </motion.h2>
           </div>
           <motion.p 
@@ -93,7 +93,7 @@ export default function Achievements() {
             whileInView={{ opacity: 1 }}
             className="text-slate-500 max-w-md text-sm md:text-base"
           >
-            A testament to our continuous efforts in education and student success.
+            शिक्षा और छात्र सफलता में हमारे निरंतर प्रयासों का एक प्रमाण।
           </motion.p>
         </div>
 

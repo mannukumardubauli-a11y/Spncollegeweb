@@ -34,13 +34,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <a href="#home" className="flex items-center gap-2">
-            <img 
-              src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
-              alt="SPN Logo" 
-              className="h-10 sm:h-12 w-auto object-contain"
-              referrerPolicy="no-referrer"
-            />
+          <a href="#home" className="flex items-center gap-2 group">
+            <div className="bg-white p-1 rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.1)] group-hover:scale-105 transition-transform">
+              <img 
+                src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
+                alt="SPN Logo" 
+                className="h-10 sm:h-12 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
+            </div>
             <h1 className={cn(
               "font-serif text-xl sm:text-2xl leading-tight font-black tracking-tight",
               isScrolled ? "text-indigo-950" : "text-slate-900"

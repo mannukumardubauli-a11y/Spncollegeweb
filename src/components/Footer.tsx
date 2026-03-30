@@ -9,12 +9,14 @@ export default function Footer() {
           {/* Branding */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img 
-                src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
-                alt="SPN Logo" 
-                className="h-16 w-auto object-contain"
-                referrerPolicy="no-referrer"
-              />
+              <div className="bg-white p-2 rounded-2xl shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
+                <img 
+                  src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
+                  alt="SPN Logo" 
+                  className="h-12 w-auto object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
               <h2 className="text-xl font-serif leading-tight font-bold">श्री प्रताप नारायण इंटर कॉलेज</h2>
             </div>
             <p className="text-emerald-300 leading-relaxed">

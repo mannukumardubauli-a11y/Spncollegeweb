@@ -37,8 +37,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center mb-6 lg:mb-10"
         >
-          <div className="inline-flex items-center gap-2 bg-indigo-50/50 backdrop-blur-sm px-5 py-2 rounded-full border border-indigo-100 shadow-sm">
-            <GraduationCap className="text-indigo-600" size={20} />
+          <div className="inline-flex items-center gap-2 bg-white px-5 py-2 rounded-full border border-indigo-100 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
+            <img 
+              src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
+              alt="Logo" 
+              className="w-6 h-6 object-contain"
+              referrerPolicy="no-referrer"
+            />
             <span className="text-indigo-900 font-bold text-base sm:text-lg tracking-wide">प्रवेश प्रारंभ 2026-27</span>
           </div>
         </motion.div>

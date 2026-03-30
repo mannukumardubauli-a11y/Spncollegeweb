@@ -61,12 +61,12 @@ export default function DigitalServices() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % portalImages.length);
-    }, 2500);
+    }, 1500);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="portal" className="py-24 px-6 bg-emerald-50/30 overflow-hidden">
+    <section id="portal" className="py-24 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <motion.div 
@@ -100,7 +100,7 @@ export default function DigitalServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="bg-white p-6 rounded-[32px] border border-emerald-100/50 hover:border-emerald-300 transition-all shadow-sm hover:shadow-xl group flex gap-5"
+                  className="bg-white p-6 rounded-[32px] border border-slate-100 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group flex gap-5"
                 >
                   <div className={`shrink-0 w-14 h-14 ${service.bg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner`}>
                     <service.icon className={service.color} size={28} />

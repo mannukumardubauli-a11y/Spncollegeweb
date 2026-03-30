@@ -6,14 +6,14 @@ const leaders = [
     name: 'श्री प्रताप नारायण सिंह',
     qualifications: '',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
-    message: 'शिक्षा ही वह शस्त्र है जिससे हम दुनिया बदल सकते हैं। हमारा लक्ष्य हर बच्चे को संस्कारित और शिक्षित बनाना है।'
+    message: 'शिक्षा वह शस्त्र है जिससे हम दुनिया बदल सकते हैं। हमारा लक्ष्य हर बच्चे को सुसंस्कृत और शिक्षित बनाना है।'
   },
   {
     role: 'प्रधानाचार्य',
     name: 'श्री अनिल कुमार सिंह',
     qualifications: 'M.A., B.Ed',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg',
-    message: 'अनुशासन और कड़ी मेहनत ही सफलता की कुंजी है। हम अपने छात्रों के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।'
+    message: 'अनुशासन और कड़ी मेहनत सफलता की कुंजी है। हम अपने छात्रों के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।'
   }
 ];
 
@@ -48,7 +48,7 @@ export default function Leadership() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="flex flex-col md:flex-row gap-8 items-center bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all group"
+              className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all group"
             >
               <div className="w-48 h-64 shrink-0 overflow-hidden rounded-3xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
                 <img

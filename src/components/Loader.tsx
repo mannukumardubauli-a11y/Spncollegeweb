@@ -12,8 +12,16 @@ export default function Loader() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="mb-8 text-center"
+        className="mb-8 text-center flex flex-col items-center"
       >
+        <div className="bg-white p-3 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] mb-6">
+          <img 
+            src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838961/app_logo.png_def4xw.png" 
+            alt="SPN Logo" 
+            className="h-20 w-auto object-contain"
+            referrerPolicy="no-referrer"
+          />
+        </div>
         <h1 className="text-2xl md:text-4xl font-serif mb-2 font-bold tracking-tighter">श्री प्रताप नारायण इंटर कॉलेज</h1>
         <p className="text-emerald-300 tracking-widest text-sm md:text-base">EDUCATION IS POWER</p>
       </motion.div>

@@ -26,7 +26,7 @@ export default function Gallery() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-serif text-slate-900 mb-4"
           >
-            Special Moments
+            विशेष क्षण
           </motion.h2>
           <p className="text-slate-600 text-lg">स्कूल की कुछ खास और सुनहरी यादें।</p>
         </div>

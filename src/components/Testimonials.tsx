@@ -6,19 +6,19 @@ const testimonials = [
   {
     name: 'राजेश कुमार',
     role: 'अभिभावक',
-    text: 'मेरे बच्चे के व्यक्तित्व में बदलाव अद्भुत है। यहाँ पढ़ाने का तरीका बहुत प्रभावी है।',
+    text: 'मेरे बच्चे के व्यक्तित्व में बदलाव वाकई अद्भुत है। यहाँ की शिक्षण पद्धति बहुत प्रभावी है।',
     img: 'https://picsum.photos/seed/parent1/100/100'
   },
   {
     name: 'अंजलि सिंह',
-    role: 'पूर्व छात्र',
-    text: 'इस स्कूल ने मुझे न केवल शिक्षा दी बल्कि जीवन की चुनौतियों का सामना करने का साहस भी दिया।',
+    role: 'पूर्व छात्रा',
+    text: 'इस स्कूल ने मुझे न केवल शिक्षा दी, बल्कि जीवन की चुनौतियों का सामना करने की शक्ति भी दी।',
     img: 'https://picsum.photos/seed/student1/100/100'
   },
   {
     name: 'संजय यादव',
     role: 'अभिभावक',
-    text: 'यहाँ अनुशासन और आधुनिक शिक्षा का सही मिश्रण देखने को मिलता है। शिक्षकों का व्यवहार बहुत सराहनीय है।',
+    text: 'अनुशासन और आधुनिक शिक्षा का एक आदर्श संतुलन। शिक्षकों का समर्पण वास्तव में सराहनीय है।',
     img: 'https://picsum.photos/seed/parent2/100/100'
   }
 ];
@@ -37,7 +37,7 @@ export default function Testimonials() {
   const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-24 px-6 bg-emerald-50 overflow-hidden">
+    <section id="testimonials" className="py-24 px-6 bg-white overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -58,7 +58,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-12 rounded-[3rem] shadow-xl border border-emerald-100"
+              className="bg-white p-12 rounded-[3rem] shadow-[0_15px_50px_rgba(0,0,0,0.1)] border border-slate-100"
             >
               <p className="text-xl md:text-2xl text-emerald-800 italic mb-10 leading-relaxed">
                 "{testimonials[index].text}"

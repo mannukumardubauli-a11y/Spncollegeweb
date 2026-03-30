@@ -30,7 +30,7 @@ const facilities = [
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="py-24 px-6 bg-emerald-50">
+    <section id="facilities" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 
@@ -53,7 +53,7 @@ export default function Facilities() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
               whileHover={{ y: -5 }}
-              className="p-8 rounded-[32px] bg-white border border-emerald-50 hover:border-emerald-200 transition-all shadow-sm hover:shadow-md group flex flex-col items-center text-center"
+              className="p-8 rounded-[32px] bg-white border border-slate-100 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group flex flex-col items-center text-center"
             >
               <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <item.icon className="text-emerald-600" size={32} />

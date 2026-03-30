@@ -83,7 +83,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-[#f9fbfb]">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2 
@@ -105,7 +105,7 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
-              className="p-6 sm:p-12 rounded-[32px] sm:rounded-[50px] bg-white border border-emerald-50/30 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_40px_rgba(16,185,129,0.08)] group flex flex-col items-start text-left"
+              className="p-6 sm:p-12 rounded-[32px] sm:rounded-[50px] bg-white border border-slate-100 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group flex flex-col items-start text-left"
             >
               <div className={`w-12 h-12 sm:w-20 sm:h-20 ${item.bg} rounded-xl sm:rounded-2xl flex items-center justify-center mb-6 sm:mb-10 group-hover:scale-110 transition-transform`}>
                 <item.icon className={item.color} size={28} />
