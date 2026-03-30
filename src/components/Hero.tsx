@@ -1,9 +1,11 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { GraduationCap, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
   const ref = useRef(null);
+  const { t } = useLanguage();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -44,7 +46,7 @@ export default function Hero() {
               className="w-6 h-6 object-contain"
               referrerPolicy="no-referrer"
             />
-            <span className="text-indigo-900 font-bold text-base sm:text-lg tracking-wide">प्रवेश प्रारंभ 2026-27</span>
+            <span className="text-indigo-900 font-bold text-base sm:text-lg tracking-wide">{t('hero.admissionOpen')}</span>
           </div>
         </motion.div>
 
@@ -57,12 +59,12 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-left order-1"
           >
-            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 mb-4 leading-[1.1]">
-              श्री प्रताप नारायण <br />
-              <span className="text-indigo-600">इंटर कॉलेज</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 mb-6 leading-[1.2]">
+              {t('hero.title1')} <br />
+              <span className="text-indigo-600">{t('hero.title2')}</span>
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-6 lg:mb-10 max-w-xl leading-relaxed">
-              अच्छी शिक्षा और अच्छे संस्कार। आधुनिक तकनीक और पारंपरिक मूल्यों का संगम।
+              {t('hero.subtitle')}
             </p>
             
             {/* Desktop Buttons */}
@@ -73,7 +75,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-5 rounded-2xl text-xl font-bold transition-all shadow-xl shadow-indigo-200 flex items-center gap-3 group"
               >
-                संपर्क करें
+                {t('hero.cta')}
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -99,14 +101,26 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            <div className="relative w-full max-w-[400px] lg:max-w-none lg:h-[600px] aspect-[4/5] overflow-hidden rounded-[3rem] lg:rounded-[4rem] shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-              <img 
-                src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838066/hero.png_asol8j.png" 
-                alt="School Hero"
-                className="w-full h-full object-cover object-top"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent" />
+            <div className="relative group w-full max-w-[450px] lg:max-w-[550px]">
+              {/* Decorative background glow */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500/10 to-pink-500/10 rounded-[4rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* The Frame */}
+              <div className="relative bg-white p-3 lg:p-4 rounded-[3.5rem] lg:rounded-[4.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-indigo-50">
+                <div className="overflow-hidden rounded-[3rem] lg:rounded-[4rem] bg-slate-50 aspect-[4/5] lg:aspect-[3/4]">
+                  <img 
+                    src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838066/hero.png_asol8j.png" 
+                    alt="School Hero"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                
+                {/* Floating Name Badge */}
+                <div className="absolute bottom-6 -left-4 sm:-left-8 bg-white px-6 py-3 sm:px-8 sm:py-4 rounded-2xl shadow-2xl border border-indigo-50 animate-bounce-slow z-20">
+                  <p className="text-slate-900 font-black text-xl sm:text-3xl tracking-tight">Ravi singh</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -123,7 +137,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-10 py-4 rounded-2xl text-lg font-bold transition-all shadow-xl shadow-indigo-200 flex items-center gap-3 w-full justify-center"
             >
-              संपर्क करें
+              {t('hero.cta')}
               <ArrowRight size={20} />
             </a>
           </motion.div>

@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const leaders = [
   {
-    role: 'प्रबंधक',
+    role: 'leadership.manager',
     name: 'श्री प्रताप नारायण सिंह',
     qualifications: '',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
-    message: 'शिक्षा वह शस्त्र है जिससे हम दुनिया बदल सकते हैं। हमारा लक्ष्य हर बच्चे को सुसंस्कृत और शिक्षित बनाना है।'
+    message: 'leadership.message1'
   },
   {
-    role: 'प्रधानाचार्य',
+    role: 'leadership.principal',
     name: 'श्री अनिल कुमार सिंह',
     qualifications: 'M.A., B.Ed',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg',
-    message: 'अनुशासन और कड़ी मेहनत सफलता की कुंजी है। हम अपने छात्रों के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।'
+    message: 'leadership.message2'
   }
 ];
 
 export default function Leadership() {
+  const { t } = useLanguage();
   return (
     <section id="leadership" className="py-20 px-6 bg-white">
       <div className="max-w-[1600px] mx-auto">
@@ -26,17 +28,17 @@ export default function Leadership() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2 block"
+            className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-6 block"
           >
-            हमारा नेतृत्व
+            {t('leadership.label')}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-slate-900"
+            className="text-3xl md:text-5xl font-black text-slate-900 leading-tight"
           >
-            मार्गदर्शक और प्रेरणास्रोत
+            {t('leadership.title')}
           </motion.h2>
         </div>
 
@@ -61,9 +63,9 @@ export default function Leadership() {
               
               <div className="text-center md:text-left">
                 <span className="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-4">
-                  {leader.role}
+                  {t(leader.role)}
                 </span>
-                <h3 className="text-2xl font-black text-slate-900 mb-1">
+                <h3 className="text-2xl font-black text-slate-900 mb-2">
                   {leader.name}
                 </h3>
                 {leader.qualifications && (
@@ -72,7 +74,7 @@ export default function Leadership() {
                   </p>
                 )}
                 <p className="text-slate-600 italic leading-relaxed">
-                  "{leader.message}"
+                  "{t(leader.message)}"
                 </p>
               </div>
             </motion.div>

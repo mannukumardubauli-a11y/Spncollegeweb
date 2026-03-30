@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { CalendarCheck, Receipt, BookOpen, BarChart3, Smartphone, ShieldCheck } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const portalImages = [
   "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840137/81dadf3d-b0bb-4634-ab57-adde6cf24030_pwmzoz.jpg",
@@ -12,43 +13,43 @@ const portalImages = [
 
 const services = [
   {
-    title: 'ऑनलाइन उपस्थिति (Attendance)',
-    desc: 'अभिभावक अपने बच्चे की दैनिक उपस्थिति मोबाइल ऐप पर देख सकते हैं।',
+    title: 'digital.s1.title',
+    desc: 'digital.s1.desc',
     icon: CalendarCheck,
     color: 'text-blue-600',
     bg: 'bg-blue-50'
   },
   {
-    title: 'डिजिटल रसीद (Receipts)',
-    desc: 'फीस जमा करने के बाद तुरंत डिजिटल रसीद प्राप्त करें और पुराना रिकॉर्ड देखें।',
+    title: 'digital.s2.title',
+    desc: 'digital.s2.desc',
     icon: Receipt,
     color: 'text-emerald-600',
     bg: 'bg-emerald-50'
   },
   {
-    title: 'ऑनलाइन होमवर्क',
-    desc: 'छात्र अपना होमवर्क और असाइनमेंट ऑनलाइन प्राप्त और जमा कर सकते हैं।',
+    title: 'digital.s3.title',
+    desc: 'digital.s3.desc',
     icon: BookOpen,
     color: 'text-amber-600',
     bg: 'bg-amber-50'
   },
   {
-    title: 'परीक्षा परिणाम (Results)',
-    desc: 'मासिक और वार्षिक परीक्षा के परिणाम पोर्टल पर आसानी से उपलब्ध।',
+    title: 'digital.s4.title',
+    desc: 'digital.s4.desc',
     icon: BarChart3,
     color: 'text-purple-600',
     bg: 'bg-purple-50'
   },
   {
-    title: 'मोबाइल ऐप सुविधा',
-    desc: 'सभी सूचनाएं और अपडेट सीधे आपके स्मार्टफोन पर नोटिफिकेशन के जरिए।',
+    title: 'digital.s5.title',
+    desc: 'digital.s5.desc',
     icon: Smartphone,
     color: 'text-indigo-600',
     bg: 'bg-indigo-50'
   },
   {
-    title: 'सुरक्षित डेटा',
-    desc: 'छात्रों और स्कूल का सारा डेटा पूरी तरह सुरक्षित और गोपनीय रहता है।',
+    title: 'digital.s6.title',
+    desc: 'digital.s6.desc',
     icon: ShieldCheck,
     color: 'text-cyan-600',
     bg: 'bg-cyan-50'
@@ -56,6 +57,7 @@ const services = [
 ];
 
 export default function DigitalServices() {
+  const { t, language } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -80,15 +82,19 @@ export default function DigitalServices() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-emerald-600 font-bold text-lg mb-4 block"
+                className="text-emerald-600 font-bold text-lg mb-6 block"
               >
-                डिजिटल शिक्षा की ओर कदम
+                {t('digital.label')}
               </motion.span>
-              <h2 className="text-4xl md:text-6xl font-black text-emerald-950 mb-6 leading-tight">
-                हमारा डिजिटल <span className="text-emerald-600">छात्र पोर्टल</span>
+              <h2 className="text-4xl md:text-6xl font-black text-emerald-950 mb-8 leading-[1.2]">
+                {language === 'hi' ? (
+                  <>हमारा <span className="text-emerald-600">स्कूल ऐप</span></>
+                ) : (
+                  <>Our <span className="text-emerald-600">School App</span></>
+                )}
               </h2>
               <p className="text-xl text-emerald-800/70 leading-relaxed max-w-2xl">
-                श्री प्रताप नारायण इंटर कॉलेज अब पूरी तरह डिजिटल है। हम आधुनिक तकनीक का उपयोग करके शिक्षा को और अधिक पारदर्शी और सुलभ बना रहे हैं।
+                {t('digital.desc')}
               </p>
             </div>
             
@@ -106,8 +112,8 @@ export default function DigitalServices() {
                     <service.icon className={service.color} size={28} />
                   </div>
                   <div>
-                    <h3 className="font-black text-emerald-950 text-lg mb-2 leading-tight">{service.title}</h3>
-                    <p className="text-sm text-emerald-800/60 leading-relaxed">{service.desc}</p>
+                    <h3 className="font-black text-emerald-950 text-lg mb-2 leading-tight">{t(service.title)}</h3>
+                    <p className="text-sm text-emerald-800/60 leading-relaxed">{t(service.desc)}</p>
                   </div>
                 </motion.div>
               ))}

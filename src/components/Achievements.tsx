@@ -1,18 +1,19 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Calendar, Users, CheckCircle2, Trophy } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const stats = [
   { 
-    label: 'उत्कृष्टता के वर्ष', 
+    label: 'achievements.years', 
     value: 30, 
-    suffix: ' वर्ष', 
+    suffix: 'achievements.yearsSuffix', 
     icon: Calendar,
     color: 'text-indigo-600',
     bgColor: 'bg-indigo-50'
   },
   { 
-    label: 'खुश छात्र', 
+    label: 'achievements.students', 
     value: 10000, 
     suffix: '+', 
     icon: Users,
@@ -20,7 +21,7 @@ const stats = [
     bgColor: 'bg-blue-50'
   },
   { 
-    label: 'सफलता दर', 
+    label: 'achievements.success', 
     value: 98, 
     suffix: '%', 
     icon: CheckCircle2,
@@ -28,7 +29,7 @@ const stats = [
     bgColor: 'bg-emerald-50'
   },
   { 
-    label: 'कुल पुरस्कार', 
+    label: 'achievements.awards', 
     value: 200, 
     suffix: '+', 
     icon: Trophy,
@@ -41,6 +42,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (isInView) {
@@ -62,10 +64,11 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     }
   }, [isInView, value]);
 
-  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+  return <span ref={ref}>{count.toLocaleString()}{t(suffix)}</span>;
 }
 
 export default function Achievements() {
+  const { t } = useLanguage();
   return (
     <section id="achievements" className="py-16 px-6 bg-white relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto relative z-10">
@@ -75,17 +78,17 @@ export default function Achievements() {
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2 block"
+              className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-6 block"
             >
-              हमारी उपलब्धियां
+              {t('achievements.label')}
             </motion.span>
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-black text-slate-900"
+              className="text-3xl md:text-5xl font-black text-slate-900 leading-tight"
             >
-              गर्व के क्षण और आंकड़े
+              {t('achievements.title')}
             </motion.h2>
           </div>
           <motion.p 
@@ -93,7 +96,7 @@ export default function Achievements() {
             whileInView={{ opacity: 1 }}
             className="text-slate-500 max-w-md text-sm md:text-base"
           >
-            शिक्षा और छात्र सफलता में हमारे निरंतर प्रयासों का एक प्रमाण।
+            {t('achievements.desc')}
           </motion.p>
         </div>
 
@@ -117,7 +120,7 @@ export default function Achievements() {
                   <Counter value={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="text-slate-500 font-medium text-xs sm:text-sm uppercase tracking-wide">
-                  {stat.label}
+                  {t(stat.label)}
                 </div>
               </div>
             </motion.div>

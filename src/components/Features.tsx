@@ -1,80 +1,81 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Laptop, CheckCircle2, Microscope, Monitor, Trophy, BookOpen, Zap, ShieldCheck, Gift, Smartphone } from 'lucide-react';
+import { GraduationCap, Laptop, CheckCircle2, Microscope, Monitor, Trophy, BookOpen, ShieldCheck, Gift, Smartphone, Zap } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const features = [
   { 
-    title: 'L.K.G. से इण्टरमीडिएट', 
-    desc: 'कुशल एवं प्रशिक्षित अध्यापकों द्वारा गुणवत्तापूर्ण शिक्षण कार्य।', 
+    title: 'features.f1.title', 
+    desc: 'features.f1.desc', 
     icon: GraduationCap, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'स्मार्ट एवं प्रोजेक्टर क्लास', 
-    desc: 'आधुनिक तकनीक के माध्यम से विषयों को समझने की बेहतर व्यवस्था।', 
+    title: 'features.f2.title', 
+    desc: 'features.f2.desc', 
     icon: Laptop, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'मासिक परीक्षा व्यवस्था', 
-    desc: 'छात्रों की प्रगति की निगरानी के लिए प्रत्येक माह के अंत में परीक्षा।', 
+    title: 'features.f3.title', 
+    desc: 'features.f3.desc', 
     icon: CheckCircle2, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'विज्ञान प्रयोगशाला', 
-    desc: 'विज्ञान वर्ग के छात्रों के लिए प्रयोगात्मक ज्ञान हेतु सुसज्जित लैब।', 
+    title: 'features.f4.title', 
+    desc: 'features.f4.desc', 
     icon: Microscope, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'कम्प्यूटर शिक्षण', 
-    desc: 'आज की आधुनिकता को ध्यान में रखते हुए विशेष कम्प्यूटर शिक्षा।', 
+    title: 'features.f5.title', 
+    desc: 'features.f5.desc', 
     icon: Monitor, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'छात्रवृत्ति की व्यवस्था', 
-    desc: 'योग्य और मेधावी छात्र/छात्राओं के लिए विशेष छात्रवृत्ति सुविधा।', 
+    title: 'features.f6.title', 
+    desc: 'features.f6.desc', 
     icon: Trophy, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'प्रतियोगी परीक्षाओं की तैयारी', 
-    desc: 'सैनिक, नवोदय एवं अन्य प्रतियोगी परीक्षाओं की विशेष तैयारी।', 
+    title: 'features.f7.title', 
+    desc: 'features.f7.desc', 
     icon: BookOpen, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'CCTV कैमरा सुरक्षा', 
-    desc: 'पूरे विद्यालय परिसर में CCTV कैमरों द्वारा 24/7 निगरानी।', 
+    title: 'features.f8.title', 
+    desc: 'features.f8.desc', 
     icon: ShieldCheck, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'प्रथम 100 प्रवेश निःशुल्क', 
-    desc: 'विद्यालय में प्रथम 100 छात्र/छात्राओं का प्रवेश पूर्णतः निःशुल्क।', 
+    title: 'features.f9.title', 
+    desc: 'features.f9.desc', 
     icon: Gift, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'स्कूल मोबाइल ऐप', 
-    desc: 'अभिभावकों के लिए बच्चों की प्रगति देखने हेतु विशेष मोबाइल ऐप।', 
+    title: 'features.f10.title', 
+    desc: 'features.f10.desc', 
     icon: Smartphone, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
   },
   { 
-    title: 'सुविधाजनक वातावरण', 
-    desc: 'शांत और अनुशासित वातावरण जो पढ़ाई के लिए सर्वोत्तम है।', 
+    title: 'features.f11.title', 
+    desc: 'features.f11.desc', 
     icon: Zap, 
     color: 'text-emerald-500', 
     bg: 'bg-emerald-50/50' 
@@ -82,17 +83,18 @@ const features = [
 ];
 
 export default function Features() {
+  const { t } = useLanguage();
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-[1600px] mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-emerald-950 mb-4"
+            className="text-3xl md:text-5xl font-black text-emerald-950 mb-6 leading-tight"
           >
-            हमारी खास बातें
+            {t('features.label')}
           </motion.h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full" />
         </div>
@@ -110,8 +112,8 @@ export default function Features() {
               <div className={`w-12 h-12 sm:w-20 sm:h-20 ${item.bg} rounded-xl sm:rounded-2xl flex items-center justify-center mb-6 sm:mb-10 group-hover:scale-110 transition-transform`}>
                 <item.icon className={item.color} size={28} />
               </div>
-              <h3 className="text-base sm:text-3xl font-black text-emerald-950 mb-3 sm:mb-6 leading-tight">{item.title}</h3>
-              <p className="text-emerald-800/40 text-[13px] sm:text-xl leading-relaxed font-medium">{item.desc}</p>
+              <h3 className="text-base sm:text-3xl font-black text-emerald-950 mb-3 sm:mb-6 leading-tight">{t(item.title)}</h3>
+              <p className="text-emerald-800/40 text-[13px] sm:text-xl leading-relaxed font-medium">{t(item.desc)}</p>
             </motion.div>
           ))}
         </div>

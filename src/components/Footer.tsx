@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, Send } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer id="contact" className="bg-emerald-950 text-white pt-24 pb-12 px-6">
       <div className="max-w-[1600px] mx-auto">
@@ -17,10 +20,10 @@ export default function Footer() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <h2 className="text-xl font-serif leading-tight font-bold">श्री प्रताप नारायण इंटर कॉलेज</h2>
+              <h2 className="text-xl font-serif leading-tight font-bold">{t('footer.collegeName')}</h2>
             </div>
             <p className="text-emerald-300 leading-relaxed">
-              हमारा उद्देश्य बच्चों को अच्छी शिक्षा देकर उनके भविष्य को बेहतर बनाना है।
+              {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
@@ -33,15 +36,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">त्वरित लिंक</h3>
+            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">{t('footer.quickLinks')}</h3>
             <ul className="space-y-4 text-emerald-300">
               {[
-                { name: 'होम', href: '#home' },
-                { name: 'सुविधाएं', href: '#facilities' },
-                { name: 'उपलब्धियां', href: '#achievements' },
-                { name: 'गैलरी', href: '#gallery' },
-                { name: 'विचार', href: '#testimonials' },
-                { name: 'संपर्क', href: '#contact' }
+                { name: t('footer.home'), href: '#home' },
+                { name: t('footer.facilities'), href: '#facilities' },
+                { name: t('footer.achievements'), href: '#achievements' },
+                { name: t('footer.gallery'), href: '#gallery' },
+                { name: t('footer.testimonials'), href: '#testimonials' },
+                { name: t('footer.contact'), href: '#contact' }
               ].map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className="hover:text-white transition-colors flex items-center gap-2">
@@ -55,11 +58,11 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">संपर्क विवरण</h3>
+            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">{t('footer.contactDetails')}</h3>
             <ul className="space-y-6 text-emerald-300">
               <li className="flex gap-4">
                 <MapPin className="text-emerald-500 shrink-0" size={24} />
-                <span>बांसगांव जमुआन, दुदही-कुशीनगर (UP)</span>
+                <span>{t('footer.address')}</span>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-emerald-500 shrink-0" size={24} />
@@ -76,12 +79,12 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">न्यूज़लेटर</h3>
-            <p className="text-emerald-300 mb-6">नवीनतम अपडेट और सूचनाएं प्राप्त करने के लिए सब्सक्राइब करें।</p>
+            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">{t('footer.newsletter')}</h3>
+            <p className="text-emerald-300 mb-6">{t('footer.newsletterDesc')}</p>
             <form className="relative">
               <input 
                 type="email" 
-                placeholder="ईमेल पता" 
+                placeholder={t('footer.emailPlaceholder')} 
                 className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500 transition-colors"
               />
               <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-emerald-600 rounded-lg hover:bg-emerald-700 transition-colors">
@@ -92,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-emerald-500 text-sm">
-          <p>© 2026 श्री प्रताप नारायण इंटरमीडिएट कॉलेज। सर्वाधिकार सुरक्षित।</p>
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

@@ -1,34 +1,37 @@
 import { motion } from 'framer-motion';
 import { Laptop, Shield, Droplets, Bus } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const facilities = [
   {
-    title: 'कंप्यूटर लैब',
-    desc: 'आधुनिक कंप्यूटर और हाई-स्पीड इंटरनेट से लैस, जहाँ छात्र तकनीकी कौशल सीखते हैं।',
+    title: 'facilities.f1.title',
+    desc: 'facilities.f1.desc',
     icon: Laptop,
     img: 'https://picsum.photos/seed/computer-lab/800/600'
   },
   {
-    title: 'CCTV निगरानी',
-    desc: 'छात्रों की सुरक्षा हमारी प्राथमिकता है। पूरे परिसर की निगरानी आधुनिक कैमरों द्वारा की जाती है।',
+    title: 'facilities.f2.title',
+    desc: 'facilities.f2.desc',
     icon: Shield,
     img: 'https://picsum.photos/seed/cctv/800/600'
   },
   {
-    title: 'RO पीने का पानी',
-    desc: 'स्वच्छता को ध्यान में रखते हुए, शुद्ध और ठंडे RO पीने के पानी की उचित व्यवस्था है।',
+    title: 'facilities.f3.title',
+    desc: 'facilities.f3.desc',
     icon: Droplets,
     img: 'https://picsum.photos/seed/water/800/600'
   },
   {
-    title: 'परिवहन सुविधा',
-    desc: 'दूर-दराज के क्षेत्रों से आने वाले छात्रों के लिए सुरक्षित और आरामदायक बस सेवा उपलब्ध है।',
+    title: 'facilities.f4.title',
+    desc: 'facilities.f4.desc',
     icon: Bus,
     img: 'https://picsum.photos/seed/school-bus/800/600'
   }
 ];
 
 export default function Facilities() {
+  const { t } = useLanguage();
+  
   return (
     <section id="facilities" className="py-24 px-6 bg-white">
       <div className="max-w-[1600px] mx-auto">
@@ -37,9 +40,9 @@ export default function Facilities() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-serif text-emerald-950 mb-4"
+            className="text-3xl md:text-5xl font-serif text-emerald-950 mb-6 leading-tight"
           >
-            स्कूल की सुविधाएं
+            {t('facilities.title')}
           </motion.h2>
           <div className="w-24 h-1 bg-emerald-600 mx-auto rounded-full" />
         </div>
@@ -58,7 +61,7 @@ export default function Facilities() {
               <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <item.icon className="text-emerald-600" size={32} />
               </div>
-              <h3 className="text-base md:text-xl font-bold text-emerald-950 leading-tight">{item.title}</h3>
+              <h3 className="text-base md:text-xl font-bold text-emerald-950 leading-tight">{t(item.title)}</h3>
             </motion.div>
           ))}
         </div>

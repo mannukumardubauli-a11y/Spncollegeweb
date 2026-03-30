@@ -1,29 +1,31 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const testimonials = [
   {
-    name: 'राजेश कुमार',
-    role: 'अभिभावक',
-    text: 'मेरे बच्चे के व्यक्तित्व में बदलाव वाकई अद्भुत है। यहाँ की शिक्षण पद्धति बहुत प्रभावी है।',
+    name: 'testimonials.t1.name',
+    role: 'testimonials.t1.role',
+    text: 'testimonials.t1.text',
     img: 'https://picsum.photos/seed/parent1/100/100'
   },
   {
-    name: 'अंजलि सिंह',
-    role: 'पूर्व छात्रा',
-    text: 'इस स्कूल ने मुझे न केवल शिक्षा दी, बल्कि जीवन की चुनौतियों का सामना करने की शक्ति भी दी।',
+    name: 'testimonials.t2.name',
+    role: 'testimonials.t2.role',
+    text: 'testimonials.t2.text',
     img: 'https://picsum.photos/seed/student1/100/100'
   },
   {
-    name: 'संजय यादव',
-    role: 'अभिभावक',
-    text: 'अनुशासन और आधुनिक शिक्षा का एक आदर्श संतुलन। शिक्षकों का समर्पण वास्तव में सराहनीय है।',
+    name: 'testimonials.t3.name',
+    role: 'testimonials.t3.role',
+    text: 'testimonials.t3.text',
     img: 'https://picsum.photos/seed/parent2/100/100'
   }
 ];
 
 export default function Testimonials() {
+  const { t } = useLanguage();
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -48,7 +50,7 @@ export default function Testimonials() {
           <Quote size={32} />
         </motion.div>
         
-        <h2 className="text-3xl md:text-5xl font-serif text-emerald-950 mb-16">लोग हमारे बारे में क्या कहते हैं</h2>
+        <h2 className="text-3xl md:text-5xl font-serif text-emerald-950 mb-16">{t('testimonials.title')}</h2>
 
         <div className="relative min-h-[400px] flex items-center justify-center">
           <AnimatePresence mode="wait">
@@ -61,14 +63,14 @@ export default function Testimonials() {
               className="bg-white p-12 rounded-[3rem] shadow-[0_15px_50px_rgba(0,0,0,0.1)] border border-slate-100"
             >
               <p className="text-xl md:text-2xl text-emerald-800 italic mb-10 leading-relaxed">
-                "{testimonials[index].text}"
+                "{t(testimonials[index].text)}"
               </p>
               <div className="flex flex-col items-center">
                 <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold text-2xl border-4 border-white mb-4 shadow-md">
-                  {testimonials[index].name.charAt(0)}
+                  {t(testimonials[index].name).charAt(0)}
                 </div>
-                <h4 className="text-xl font-bold text-emerald-950">{testimonials[index].name}</h4>
-                <span className="text-emerald-600 font-medium">{testimonials[index].role}</span>
+                <h4 className="text-xl font-bold text-emerald-950">{t(testimonials[index].name)}</h4>
+                <span className="text-emerald-600 font-medium">{t(testimonials[index].role)}</span>
               </div>
             </motion.div>
           </AnimatePresence>

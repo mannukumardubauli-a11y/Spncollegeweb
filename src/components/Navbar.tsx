@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
-
-const navLinks = [
-  { name: 'होम', href: '#home' },
-  { name: 'नेतृत्व', href: '#leadership' },
-  { name: 'पोर्टल', href: '#portal' },
-  { name: 'उपलब्धियां', href: '#achievements' },
-  { name: 'गैलरी', href: '#gallery' },
-  { name: 'विचार', href: '#testimonials' },
-  { name: 'संपर्क', href: '#contact' },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.leadership'), href: '#leadership' },
+    { name: t('nav.schoolApp'), href: '#portal' },
+    { name: t('nav.achievements'), href: '#achievements' },
+    { name: t('nav.gallery'), href: '#gallery' },
+    { name: t('nav.testimonials'), href: '#testimonials' },
+    { name: t('nav.contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,10 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'hi' ? 'en' : 'hi');
+  };
 
   return (
     <nav
@@ -66,28 +72,57 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <div className="flex items-center gap-3">
+          
+          <div className="flex items-center gap-4">
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className={cn(
+                "flex items-center gap-2 px-3 py-1.5 rounded-full border font-bold transition-all",
+                isScrolled 
+                  ? "border-indigo-100 text-indigo-950 hover:bg-indigo-50" 
+                  : "border-slate-200 text-slate-700 hover:bg-white/20"
+              )}
+            >
+              <Globe size={18} className="text-indigo-600" />
+              <span>{language === 'hi' ? 'English' : 'हिंदी'}</span>
+            </button>
+
             <a 
               href="https://wa.me/918887999145" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full font-bold transition-all shadow-md hover:shadow-indigo-200"
             >
-              प्रवेश प्रारंभ
+              {t('nav.admission')}
             </a>
           </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className={cn(
-            "md:hidden p-2",
-            isScrolled ? "text-indigo-950" : "text-slate-900"
-          )}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            onClick={toggleLanguage}
+            className={cn(
+              "flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-bold transition-all text-sm",
+              isScrolled 
+                ? "border-indigo-100 text-indigo-950" 
+                : "border-slate-200 text-slate-900 bg-white/50"
+            )}
+          >
+            <Globe size={16} className="text-indigo-600" />
+            <span>{language === 'hi' ? 'EN' : 'HI'}</span>
+          </button>
+          <button
+            className={cn(
+              "p-2",
+              isScrolled ? "text-indigo-950" : "text-slate-900"
+            )}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -116,7 +151,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold text-center"
               >
-                प्रवेश प्रारंभ
+                {t('nav.admission')}
               </a>
             </div>
           </motion.div>

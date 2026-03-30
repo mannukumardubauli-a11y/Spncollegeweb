@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { LanguageProvider } from './context/LanguageContext';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,6 +10,7 @@ import Achievements from './components/Achievements';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import DigitalServices from './components/DigitalServices';
+import Facilities from './components/Facilities';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -24,25 +26,28 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen">
-      <AnimatePresence>
-        {loading && <Loader />}
-      </AnimatePresence>
+    <LanguageProvider>
+      <div className="relative min-h-screen">
+        <AnimatePresence>
+          {loading && <Loader />}
+        </AnimatePresence>
 
-      {!loading && (
-        <main className="animate-in fade-in duration-1000">
-          <Navbar />
-          <Hero />
-          <Leadership />
-          <Features />
-          <DigitalServices />
-          <Achievements />
-          <Gallery />
-          <Testimonials />
-          <Footer />
-          <WhatsAppButton />
-        </main>
-      )}
-    </div>
+        {!loading && (
+          <main className="animate-in fade-in duration-1000">
+            <Navbar />
+            <Hero />
+            <Leadership />
+            <Features />
+            <DigitalServices />
+            <Facilities />
+            <Achievements />
+            <Gallery />
+            <Testimonials />
+            <Footer />
+            <WhatsAppButton />
+          </main>
+        )}
+      </div>
+    </LanguageProvider>
   );
 }
