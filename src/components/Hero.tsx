@@ -109,8 +109,8 @@ export default function Hero() {
               <div className="relative bg-white p-3 lg:p-4 rounded-[3.5rem] lg:rounded-[4.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-indigo-50">
                 <div className="overflow-hidden rounded-[3rem] lg:rounded-[4rem] bg-slate-50 aspect-[4/5] lg:aspect-[3/4]">
                   <img 
-                    src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774838066/hero.png_asol8j.png" 
-                    alt="School Hero"
+                    src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg" 
+                    alt="Anil Kumar Singh"
                     className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
@@ -118,7 +118,10 @@ export default function Hero() {
                 
                 {/* Floating Name Badge */}
                 <div className="absolute bottom-6 -left-4 sm:-left-8 bg-white px-6 py-3 sm:px-8 sm:py-4 rounded-2xl shadow-2xl border border-indigo-50 animate-bounce-slow z-20">
-                  <p className="text-slate-900 font-black text-xl sm:text-3xl tracking-tight">Ravi singh</p>
+                  <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-md mb-4 uppercase tracking-widest">
+                    {t('leadership.principal')}
+                  </span>
+                  <p className="text-slate-900 font-black text-xl sm:text-3xl tracking-widest">{t('hero.principalName')}</p>
                 </div>
               </div>
             </div>

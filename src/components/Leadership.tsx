@@ -10,10 +10,17 @@ const leaders = [
     message: 'leadership.message1'
   },
   {
-    role: 'leadership.principal',
-    name: 'श्री अनिल कुमार सिंह',
-    qualifications: 'M.A., B.Ed',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg',
+    role: 'leadership.vicePrincipal',
+    name: 'उप-प्रधानाचार्य',
+    qualifications: '',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/af2fc987-1c1b-4a41-ba00-da0a8165c75a_bzll4w.jpg',
+    message: 'leadership.message2'
+  },
+  {
+    role: 'leadership.clerk',
+    name: 'लिपिक',
+    qualifications: '',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/1e25eff9-4d5c-4223-a595-6097bab459c5_kuxu0b.jpg',
     message: 'leadership.message2'
   }
 ];
@@ -42,15 +49,15 @@ export default function Leadership() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {leaders.map((leader, idx) => (
             <motion.div
               key={leader.name}
-              initial={{ opacity: 0, x: idx === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col md:flex-row gap-8 items-center bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all group"
+              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              className="flex flex-col gap-8 items-center bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all group text-center"
             >
               <div className="w-48 h-64 shrink-0 overflow-hidden rounded-3xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
                 <img
@@ -61,7 +68,7 @@ export default function Leadership() {
                 />
               </div>
               
-              <div className="text-center md:text-left">
+              <div>
                 <span className="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-4">
                   {t(leader.role)}
                 </span>

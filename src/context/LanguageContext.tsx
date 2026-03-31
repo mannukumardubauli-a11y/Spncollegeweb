@@ -25,12 +25,15 @@ const translations = {
     'hero.title2': 'इंटर कॉलेज',
     'hero.subtitle': 'अच्छी शिक्षा और अच्छे संस्कार। आधुनिक तकनीक और पारंपरिक मूल्यों का संगम।',
     'hero.cta': 'संपर्क करें',
+    'hero.principalName': 'श्री  अनिल  कुमार  सिंह',
     // Leadership
     'leadership.label': 'हमारा नेतृत्व',
     'leadership.title': 'मार्गदर्शक और प्रेरणास्रोत',
     'leadership.desc': 'शिक्षा के प्रति समर्पित नेतृत्व जो भविष्य के नायकों को आकार दे रहा है।',
     'leadership.manager': 'प्रबंधक',
     'leadership.principal': 'प्रधानाचार्य',
+    'leadership.vicePrincipal': 'उप-प्रधानाचार्य',
+    'leadership.clerk': 'लिपिक',
     'leadership.message1': 'शिक्षा वह शस्त्र है जिससे हम दुनिया बदल सकते हैं। हमारा लक्ष्य हर बच्चे को सुसंस्कृत और शिक्षित बनाना है।',
     'leadership.message2': 'अनुशासन और कड़ी मेहनत सफलता की कुंजी है। हम अपने छात्रों के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।',
     // Features
@@ -154,12 +157,15 @@ const translations = {
     'hero.title2': 'Inter College',
     'hero.subtitle': 'Quality education and good values. A blend of modern technology and traditional values.',
     'hero.cta': 'Contact Us',
+    'hero.principalName': 'Shri  Anil  Kumar  Singh',
     // Leadership
     'leadership.label': 'Our Leadership',
     'leadership.title': 'Guides and Inspiration',
     'leadership.desc': 'Dedicated leadership in education shaping future heroes.',
     'leadership.manager': 'Manager',
     'leadership.principal': 'Principal',
+    'leadership.vicePrincipal': 'Vice Principal',
+    'leadership.clerk': 'Clerk',
     'leadership.message1': 'Education is the weapon with which we can change the world. Our goal is to make every child cultured and educated.',
     'leadership.message2': 'Discipline and hard work are the keys to success. We are committed to the holistic development of our students.',
     // Features

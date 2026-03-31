@@ -12,6 +12,15 @@ const images = [
   { id: 6, category: 'gallery.cat6', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774792159/f4bbc0fb-813e-4f4c-ad25-57a274a58e04_roquii.jpg' },
   { id: 7, category: 'gallery.cat7', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774792157/6584660a-a619-41d1-8f2a-01f2368e790b_pxx6cz.jpg' },
   { id: 8, category: 'gallery.cat8', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774792160/b06e12ca-1302-46c8-98e6-5e2aa572f08e_ibq8ok.jpg' },
+  { id: 9, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979913/f73f6162-a638-4122-8407-c4ec6cc70411_kffy32.jpg' },
+  { id: 10, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979912/f178077d-cb94-4e45-88d6-451c8025f10c_g7l4d0.jpg' },
+  { id: 11, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979911/b7b2fd7a-facd-439d-bf88-f272a632e2a1_h0cl1j.jpg' },
+  { id: 12, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979911/c040771f-64e0-4567-af5a-d688178947f6_fflh32.jpg' },
+  { id: 13, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/6024f316-c570-48ed-9cc4-5427327213de_afbuco.jpg' },
+  { id: 14, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/8497e7ed-fb39-4757-a343-7addc8311084_ezleeg.jpg' },
+  { id: 15, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/2fac0504-f9cf-41fe-abf6-77a8f3237f53_cador5.jpg' },
+  { id: 16, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/00bb6a3a-a40e-46d1-8c9b-4fc1e21b2f09_nscxfn.jpg' },
+  { id: 17, category: 'gallery.cat2', img: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979908/7ed17867-e241-4290-a046-25127878af5c_as929f.jpg' },
 ];
 
 export default function Gallery() {
@@ -51,8 +60,10 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white font-medium text-sm md:text-base">{t(item.category)}</span>
+              <div className="absolute inset-0 bg-slate-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+                  <Search size={24} />
+                </div>
               </div>
             </motion.div>
           ))}
@@ -91,9 +102,7 @@ export default function Gallery() {
                 className="w-full h-full object-contain bg-slate-900"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-950/80 to-transparent">
-                <h3 className="text-white text-xl md:text-2xl font-bold">{t(selectedImage.category)}</h3>
-              </div>
+              {/* No category label here */}
             </motion.div>
           </motion.div>
         )}
