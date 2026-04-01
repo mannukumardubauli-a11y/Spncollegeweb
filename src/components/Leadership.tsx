@@ -4,21 +4,21 @@ import { useLanguage } from '../context/LanguageContext';
 const leaders = [
   {
     role: 'leadership.manager',
-    name: 'श्री प्रताप नारायण सिंह',
+    name: 'leadership.managerName',
     qualifications: '',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
     message: 'leadership.message1'
   },
   {
     role: 'leadership.vicePrincipal',
-    name: 'उप-प्रधानाचार्य',
+    name: 'leadership.vicePrincipalName',
     qualifications: '',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/1e25eff9-4d5c-4223-a595-6097bab459c5_kuxu0b.jpg',
     message: 'leadership.message2'
   },
   {
     role: 'leadership.clerk',
-    name: 'लिपिक',
+    name: 'leadership.clerkName',
     qualifications: '',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/af2fc987-1c1b-4a41-ba00-da0a8165c75a_bzll4w.jpg',
     message: 'leadership.message2'
@@ -62,7 +62,7 @@ export default function Leadership() {
               <div className="w-48 h-64 shrink-0 overflow-hidden rounded-3xl shadow-lg transform group-hover:scale-105 transition-transform duration-500">
                 <img
                   src={leader.image}
-                  alt={leader.name}
+                  alt={t(leader.name)}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -73,7 +73,7 @@ export default function Leadership() {
                   {t(leader.role)}
                 </span>
                 <h3 className="text-2xl font-black text-slate-900 mb-2">
-                  {leader.name}
+                  {t(leader.name)}
                 </h3>
                 {leader.qualifications && (
                   <p className="text-indigo-600 font-bold text-sm mb-4">
