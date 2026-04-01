@@ -13,14 +13,14 @@ const leaders = [
     role: 'leadership.vicePrincipal',
     name: 'उप-प्रधानाचार्य',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/af2fc987-1c1b-4a41-ba00-da0a8165c75a_bzll4w.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/1e25eff9-4d5c-4223-a595-6097bab459c5_kuxu0b.jpg',
     message: 'leadership.message2'
   },
   {
     role: 'leadership.clerk',
     name: 'लिपिक',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/1e25eff9-4d5c-4223-a595-6097bab459c5_kuxu0b.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/af2fc987-1c1b-4a41-ba00-da0a8165c75a_bzll4w.jpg',
     message: 'leadership.message2'
   }
 ];
