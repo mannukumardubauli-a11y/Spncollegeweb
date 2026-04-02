@@ -6,7 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 const stats = [
   { 
     label: 'achievements.years', 
-    value: 30, 
+    value: 15, 
     suffix: 'achievements.yearsSuffix', 
     icon: Calendar,
     color: 'text-indigo-600',

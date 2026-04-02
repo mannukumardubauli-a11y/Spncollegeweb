@@ -15,6 +15,7 @@ const translations = {
     'nav.leadership': 'नेतृत्व',
     'nav.schoolApp': 'स्कूल ऐप',
     'nav.achievements': 'उपलब्धियां',
+    'nav.myschool': 'मेरा स्कूल',
     'nav.gallery': 'गैलरी',
     'nav.testimonials': 'विचार',
     'nav.contact': 'संपर्क',
@@ -100,6 +101,9 @@ const translations = {
     'gallery.cat6': 'स्मार्ट क्लास',
     'gallery.cat7': 'प्रयोगशाला',
     'gallery.cat8': 'पुस्तकालय',
+    // My School
+    'myschool.title': 'मेरा स्कूल',
+    'myschool.desc': 'हमारे विद्यालय की कुछ झलकियां।',
     // Testimonials
     'testimonials.label': 'अभिभावकों के विचार',
     'testimonials.title': 'लोग हमारे बारे में क्या कहते हैं',
@@ -150,6 +154,7 @@ const translations = {
     'nav.leadership': 'Leadership',
     'nav.schoolApp': 'School App',
     'nav.achievements': 'Achievements',
+    'nav.myschool': 'My School',
     'nav.gallery': 'Gallery',
     'nav.testimonials': 'Testimonials',
     'nav.contact': 'Contact',
@@ -235,6 +240,9 @@ const translations = {
     'gallery.cat6': 'Smart Class',
     'gallery.cat7': 'Laboratory',
     'gallery.cat8': 'Library',
+    // My School
+    'myschool.title': 'My School',
+    'myschool.desc': 'Some glimpses of our school.',
     // Testimonials
     'testimonials.label': 'Parents\' Feedback',
     'testimonials.title': 'What people say about us',

@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Leadership from './components/Leadership';
 import Features from './components/Features';
 import Achievements from './components/Achievements';
+import MySchool from './components/MySchool';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import DigitalServices from './components/DigitalServices';
@@ -41,6 +42,7 @@ export default function App() {
             <DigitalServices />
             <Facilities />
             <Achievements />
+            <MySchool />
             <Gallery />
             <Testimonials />
             <Footer />

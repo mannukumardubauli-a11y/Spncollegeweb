@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: t('nav.leadership'), href: '#leadership' },
     { name: t('nav.schoolApp'), href: '#portal' },
     { name: t('nav.achievements'), href: '#achievements' },
+    { name: t('nav.myschool'), href: '#myschool' },
     { name: t('nav.gallery'), href: '#gallery' },
     { name: t('nav.testimonials'), href: '#testimonials' },
     { name: t('nav.contact'), href: '#contact' },
