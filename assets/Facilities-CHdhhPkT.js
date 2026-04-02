@@ -1,0 +1,16 @@
+import{c as i,u as l,j as e,m as c}from"./index-ClTvo-_x.js";import{L as o}from"./laptop-CBLQbFpJ.js";/**
+ * @license lucide-react v0.546.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const d=[["path",{d:"M8 6v6",key:"18i7km"}],["path",{d:"M15 6v6",key:"1sg6z9"}],["path",{d:"M2 12h19.6",key:"de5uta"}],["path",{d:"M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3",key:"1wwztk"}],["circle",{cx:"7",cy:"18",r:"2",key:"19iecd"}],["path",{d:"M9 18h5",key:"lrx6i"}],["circle",{cx:"16",cy:"18",r:"2",key:"1v4tcr"}]],r=i("bus",d);/**
+ * @license lucide-react v0.546.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const n=[["path",{d:"M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z",key:"1ptgy4"}],["path",{d:"M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97",key:"1sl1rz"}]],p=i("droplets",n);/**
+ * @license lucide-react v0.546.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const h=[["path",{d:"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",key:"oel41y"}]],m=i("shield",h),x=[{title:"facilities.f1.title",desc:"facilities.f1.desc",icon:o,img:"https://picsum.photos/seed/computer-lab/800/600"},{title:"facilities.f2.title",desc:"facilities.f2.desc",icon:m,img:"https://picsum.photos/seed/cctv/800/600"},{title:"facilities.f3.title",desc:"facilities.f3.desc",icon:p,img:"https://picsum.photos/seed/water/800/600"},{title:"facilities.f4.title",desc:"facilities.f4.desc",icon:r,img:"https://picsum.photos/seed/school-bus/800/600"}];function g(){const{t:s}=l();return e.jsx("section",{id:"facilities",className:"py-24 px-6 bg-white",children:e.jsxs("div",{className:"max-w-[1600px] mx-auto",children:[e.jsxs("div",{className:"text-center mb-16",children:[e.jsx(c.h2,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},className:"text-3xl md:text-5xl font-serif text-emerald-950 mb-6 leading-tight",children:s("facilities.title")}),e.jsx("div",{className:"w-24 h-1 bg-emerald-600 mx-auto rounded-full"})]}),e.jsx("div",{className:"grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6",children:x.map((t,a)=>e.jsxs(c.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{delay:a*.05},whileHover:{y:-5},className:"p-8 rounded-[32px] bg-white border border-slate-100 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group flex flex-col items-center text-center",children:[e.jsx("div",{className:"w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform",children:e.jsx(t.icon,{className:"text-emerald-600",size:32})}),e.jsx("h3",{className:"text-base md:text-xl font-bold text-emerald-950 leading-tight",children:s(t.title)})]},t.title))})]})})}export{g as default};
