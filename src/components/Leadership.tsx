@@ -13,14 +13,14 @@ const leaders = [
     role: 'leadership.vicePrincipal',
     name: 'leadership.vicePrincipalName',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979906/1e25eff9-4d5c-4223-a595-6097bab459c5_kuxu0b.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1775150419/e344ac58-7dbb-447e-b3ae-c38e36e66e8d_ykkylh.jpg',
     message: 'leadership.message2'
   },
   {
     role: 'leadership.clerk',
     name: 'leadership.clerkName',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774979909/af2fc987-1c1b-4a41-ba00-da0a8165c75a_bzll4w.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1775150427/83d3bb1b-84c6-4818-a02e-38d961830ec6_uymrgz.jpg',
     message: 'leadership.message2'
   }
 ];
