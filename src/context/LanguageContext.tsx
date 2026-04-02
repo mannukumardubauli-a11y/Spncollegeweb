@@ -13,6 +13,7 @@ const translations = {
     // Navbar
     'nav.home': 'होम',
     'nav.leadership': 'नेतृत्व',
+    'nav.management': 'प्रबंधन',
     'nav.schoolApp': 'स्कूल ऐप',
     'nav.achievements': 'उपलब्धियां',
     'nav.myschool': 'मेरा स्कूल',
@@ -40,6 +41,11 @@ const translations = {
     'leadership.clerkName': 'श्री प्रेमसागर कुशवाहा',
     'leadership.message1': 'शिक्षा वह शस्त्र है जिससे हम दुनिया बदल सकते हैं। हमारा लक्ष्य हर बच्चे को सुसंस्कृत और शिक्षित बनाना है।',
     'leadership.message2': 'अनुशासन और कड़ी मेहनत सफलता की कुंजी है। हम अपने छात्रों के सर्वांगीण विकास के लिए प्रतिबद्ध हैं।',
+    // Management
+    'management.label': 'प्रबंधन',
+    'management.title': 'प्रबंधन समिति',
+    'management.raviSingh': 'रवि सिंह',
+    'management.role': 'प्रबंध निदेशक',
     // Features
     'features.label': 'हमारी खास बातें',
     'features.f1.title': 'L.K.G. से इण्टरमीडिएट',
@@ -152,6 +158,7 @@ const translations = {
     // Navbar
     'nav.home': 'Home',
     'nav.leadership': 'Leadership',
+    'nav.management': 'Management',
     'nav.schoolApp': 'School App',
     'nav.achievements': 'Achievements',
     'nav.myschool': 'My School',
@@ -179,6 +186,11 @@ const translations = {
     'leadership.clerkName': 'Shri Premsagar Kushwaha',
     'leadership.message1': 'Education is the weapon with which we can change the world. Our goal is to make every child cultured and educated.',
     'leadership.message2': 'Discipline and hard work are the keys to success. We are committed to the holistic development of our students.',
+    // Management
+    'management.label': 'Management',
+    'management.title': 'Management Committee',
+    'management.raviSingh': 'Ravi Singh',
+    'management.role': 'Managing Director',
     // Features
     'features.label': 'Our Special Features',
     'features.f1.title': 'L.K.G. to Intermediate',

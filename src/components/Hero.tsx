@@ -109,7 +109,7 @@ export default function Hero() {
               <div className="relative bg-white p-3 lg:p-4 rounded-[3.5rem] lg:rounded-[4.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-indigo-50">
                 <div className="overflow-hidden rounded-[3rem] lg:rounded-[4rem] bg-slate-50 aspect-[4/5] lg:aspect-[3/4]">
                   <img 
-                    src="https://res.cloudinary.com/dabboo5yx/image/upload/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg" 
+                    src="https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774839202/3aa67467-f9f8-4206-b58e-de13814f60cb_wjoux6.jpg" 
                     alt="Anil Kumar Singh"
                     className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"

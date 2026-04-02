@@ -12,6 +12,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t('nav.home'), href: '#home' },
     { name: t('nav.leadership'), href: '#leadership' },
+    { name: t('nav.management'), href: '#management' },
     { name: t('nav.schoolApp'), href: '#portal' },
     { name: t('nav.achievements'), href: '#achievements' },
     { name: t('nav.myschool'), href: '#myschool' },

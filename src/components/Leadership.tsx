@@ -6,7 +6,7 @@ const leaders = [
     role: 'leadership.manager',
     name: 'leadership.managerName',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
     message: 'leadership.message1'
   },
   {
@@ -20,7 +20,7 @@ const leaders = [
     role: 'leadership.clerk',
     name: 'leadership.clerkName',
     qualifications: '',
-    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/v1775150427/83d3bb1b-84c6-4818-a02e-38d961830ec6_uymrgz.jpg',
+    image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1775150427/83d3bb1b-84c6-4818-a02e-38d961830ec6_uymrgz.jpg',
     message: 'leadership.message2'
   }
 ];
@@ -65,6 +65,7 @@ export default function Leadership() {
                   alt={t(leader.name)}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
               

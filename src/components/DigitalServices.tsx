@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const portalImages = [
-  "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840137/81dadf3d-b0bb-4634-ab57-adde6cf24030_pwmzoz.jpg",
-  "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840136/bdc10abf-44a5-4312-a316-e1a4cc6d812b_g8n9vb.jpg",
-  "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840136/81f7431f-51b7-42e3-9e94-4229233fe648_zurpjp.jpg",
-  "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840136/1a1afe82-5f25-4b83-89b6-4022e2640b9e_keik3q.jpg",
-  "https://res.cloudinary.com/dabboo5yx/image/upload/v1774840136/7b897f6d-bc15-4496-8b7b-165cc40d1f89_wpplvn.jpg"
+  "https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774840137/81dadf3d-b0bb-4634-ab57-adde6cf24030_pwmzoz.jpg",
+  "https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774840136/bdc10abf-44a5-4312-a316-e1a4cc6d812b_g8n9vb.jpg",
+  "https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774840136/81f7431f-51b7-42e3-9e94-4229233fe648_zurpjp.jpg",
+  "https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774840136/1a1afe82-5f25-4b83-89b6-4022e2640b9e_keik3q.jpg",
+  "https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774840136/7b897f6d-bc15-4496-8b7b-165cc40d1f89_wpplvn.jpg"
 ];
 
 const services = [
@@ -146,6 +146,7 @@ export default function DigitalServices() {
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="w-full h-full object-cover absolute inset-0"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </AnimatePresence>
                 

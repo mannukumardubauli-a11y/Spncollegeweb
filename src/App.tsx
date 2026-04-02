@@ -1,28 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { LanguageProvider } from './context/LanguageContext';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Leadership from './components/Leadership';
-import Features from './components/Features';
-import Achievements from './components/Achievements';
-import MySchool from './components/MySchool';
-import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
-import DigitalServices from './components/DigitalServices';
-import Facilities from './components/Facilities';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+
+// Lazy load components below the fold
+const Leadership = lazy(() => import('./components/Leadership'));
+const Management = lazy(() => import('./components/Management'));
+const Features = lazy(() => import('./components/Features'));
+const Achievements = lazy(() => import('./components/Achievements'));
+const MySchool = lazy(() => import('./components/MySchool'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const DigitalServices = lazy(() => import('./components/DigitalServices'));
+const Facilities = lazy(() => import('./components/Facilities'));
+const Footer = lazy(() => import('./components/Footer'));
+const WhatsAppButton = lazy(() => import('./components/WhatsAppButton'));
 
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
+    // Reduced loading time for faster initial feel
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,16 +40,19 @@ export default function App() {
           <main className="animate-in fade-in duration-1000">
             <Navbar />
             <Hero />
-            <Leadership />
-            <Features />
-            <DigitalServices />
-            <Facilities />
-            <Achievements />
-            <MySchool />
-            <Gallery />
-            <Testimonials />
-            <Footer />
-            <WhatsAppButton />
+            <Suspense fallback={<div className="h-20" />}>
+              <Leadership />
+              <Management />
+              <Features />
+              <DigitalServices />
+              <Facilities />
+              <Achievements />
+              <MySchool />
+              <Gallery />
+              <Testimonials />
+              <Footer />
+              <WhatsAppButton />
+            </Suspense>
           </main>
         )}
       </div>

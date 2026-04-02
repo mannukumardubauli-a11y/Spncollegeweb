@@ -40,6 +40,7 @@ export default function MySchool() {
                 alt={`School ${idx + 1}`}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
             </motion.div>
           ))}
