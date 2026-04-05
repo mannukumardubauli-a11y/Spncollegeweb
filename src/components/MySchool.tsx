@@ -4,7 +4,8 @@ import { useLanguage } from '../context/LanguageContext';
 const schoolImages = [
   'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1775151797/8f1c32e4-9609-4f6d-843e-841448c065ca_oznkpt.jpg',
   'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774792162/7a222083-5e77-4837-8dd8-60e73f4ca53e_wqv5pu.jpg',
-  'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774792162/a588e52d-83a3-43cd-9314-e61514d6d5c7_bij1cs.jpg'
+  'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774792162/a588e52d-83a3-43cd-9314-e61514d6d5c7_bij1cs.jpg',
+  'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774979911/b7b2fd7a-facd-439d-bf88-f272a632e2a1_h0cl1j.jpg'
 ];
 
 export default function MySchool() {

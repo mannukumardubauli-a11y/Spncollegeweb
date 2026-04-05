@@ -5,23 +5,23 @@ const leaders = [
   {
     role: 'leadership.manager',
     name: 'leadership.managerName',
-    qualifications: '',
+    qualifications: 'leadership.managerQual',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1774839204/134b1d01-6d75-4e9b-99d7-3a9871133af2_acaqbh.jpg',
     message: 'leadership.message1'
   },
   {
     role: 'leadership.vicePrincipal',
     name: 'leadership.vicePrincipalName',
-    qualifications: '',
+    qualifications: 'leadership.vicePrincipalQual',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1775150419/e344ac58-7dbb-447e-b3ae-c38e36e66e8d_ykkylh.jpg',
     message: 'leadership.message2'
   },
   {
     role: 'leadership.clerk',
     name: 'leadership.clerkName',
-    qualifications: '',
+    qualifications: 'leadership.clerkQual',
     image: 'https://res.cloudinary.com/dabboo5yx/image/upload/q_auto/f_auto/v1775150427/83d3bb1b-84c6-4818-a02e-38d961830ec6_uymrgz.jpg',
-    message: 'leadership.message2'
+    message: 'leadership.message3'
   }
 ];
 
@@ -78,7 +78,7 @@ export default function Leadership() {
                 </h3>
                 {leader.qualifications && (
                   <p className="text-indigo-600 font-bold text-sm mb-4">
-                    {leader.qualifications}
+                    {t(leader.qualifications)}
                   </p>
                 )}
                 <p className="text-slate-600 italic leading-relaxed">

@@ -50,6 +50,9 @@ export default function Management() {
               <h3 className="text-2xl font-black text-slate-900 mb-2">
                 {t('management.raviSingh')}
               </h3>
+              <p className="text-indigo-600 font-bold text-sm mb-4">
+                {t('management.raviQual')}
+              </p>
             </div>
           </motion.div>
         </div>

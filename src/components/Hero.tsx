@@ -122,6 +122,7 @@ export default function Hero() {
                     {t('leadership.principal')}
                   </span>
                   <p className="text-slate-900 font-black text-xl sm:text-3xl tracking-widest">{t('hero.principalName')}</p>
+                  <p className="text-indigo-600 font-bold text-sm mt-1">{t('hero.principalQual')}</p>
                 </div>
               </div>
             </div>

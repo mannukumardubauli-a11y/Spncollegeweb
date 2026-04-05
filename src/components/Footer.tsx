@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, Send } from 'lucide-react';
+import { MapPin, Phone, Twitter, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
@@ -26,11 +26,12 @@ export default function Footer() {
               {t('footer.tagline')}
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="p-2 bg-white/10 rounded-lg hover:bg-emerald-500 transition-colors">
-                  <Icon size={20} />
-                </a>
-              ))}
+              <a href="https://x.com/RaviSin05988737" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg hover:bg-emerald-500 transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="https://www.instagram.com/ravisingh_887?igsh=dGl5ZGg0eXN2cmNm" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg hover:bg-emerald-500 transition-colors">
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
 
@@ -57,9 +58,9 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">{t('footer.contactDetails')}</h3>
-            <ul className="space-y-6 text-emerald-300">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-emerald-300">
               <li className="flex gap-4">
                 <MapPin className="text-emerald-500 shrink-0" size={24} />
                 <span>{t('footer.address')}</span>
@@ -70,27 +71,7 @@ export default function Footer() {
                   +91 88879 99145
                 </a>
               </li>
-              <li className="flex gap-4">
-                <Mail className="text-emerald-500 shrink-0" size={24} />
-                <span>info@spnic.edu.in</span>
-              </li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-xl font-serif mb-8 border-b border-white/10 pb-2">{t('footer.newsletter')}</h3>
-            <p className="text-emerald-300 mb-6">{t('footer.newsletterDesc')}</p>
-            <form className="relative">
-              <input 
-                type="email" 
-                placeholder={t('footer.emailPlaceholder')} 
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-500 transition-colors"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-emerald-600 rounded-lg hover:bg-emerald-700 transition-colors">
-                <Send size={18} />
-              </button>
-            </form>
           </div>
         </div>
 

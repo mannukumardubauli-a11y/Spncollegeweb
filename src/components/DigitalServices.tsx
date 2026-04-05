@@ -93,9 +93,21 @@ export default function DigitalServices() {
                   <>Our <span className="text-emerald-600">School App</span></>
                 )}
               </h2>
-              <p className="text-xl text-emerald-800/70 leading-relaxed max-w-2xl">
+              <p className="text-xl text-emerald-800/70 leading-relaxed max-w-2xl mb-8">
                 {t('digital.desc')}
               </p>
+              <motion.a
+                href="https://github.com/amannukumar1221-cell/update/releases/download/9/app-arm64-v8a-release.apk"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-[0_10px_30px_rgba(5,150,105,0.3)] hover:bg-emerald-700 transition-all mb-12"
+              >
+                <Smartphone size={24} />
+                {t('digital.download')}
+              </motion.a>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
